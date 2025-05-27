@@ -3,6 +3,7 @@ import { Moon, Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SelectedPage } from "@/shared/types";
 import Link from "./Link";
+import { HiX } from "react-icons/hi";
 
 type Props = {
   isTopOfPage: boolean;
@@ -91,6 +92,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
           {/* Toggle button on right */}
           <motion.button
+            aria-label="Toggle-dark-light-mode"
             onClick={() => setDarkMode(!darkMode)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -110,6 +112,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             transition={{ duration: 0.3 }}
             className="fixed top-0 left-0 w-full h-screen z-50  md:hidden overflow-hidden bg-white/80 dark:bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center "
           >
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+              aria-label="Close menu"
+            >
+              <HiX size={24} className="text-textLight dark:text-textDark" />
+            </button>
+
             <div className="mt-4 space-y-3 text-center">
               {Object.values(SelectedPage).map((item) => (
                 <motion.div
