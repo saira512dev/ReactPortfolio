@@ -3,6 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./scenes/home";
 import About from "./scenes/about";
+import Skills from "./scenes/skills";
+import Footer from "./scenes/footer";
 import { SelectedPage } from "./shared/types";
 
 function App() {
@@ -34,11 +36,11 @@ function App() {
       />
       <Home setSelectedPage={setSelectedPage} />
       <About setSelectedPage={setSelectedPage} />
-      {/* <OurClasses setSelectedPage={setSelectedPage} /> */}
+      <Skills setSelectedPage={setSelectedPage} />
       {/* <Testimonials setSelectedPage={setSelectedPage} /> */}
       {/* <FAQ setSelectedPage={setSelectedPage} /> */}
       {/* <ContactUs setSelectedPage={setSelectedPage} /> */}
-      {/* <Footer setSelectedPage={setSelectedPage} selectedPage={selectedPage} /> */}
+      <Footer />
     </div>
   );
 }

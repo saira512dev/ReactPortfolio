@@ -8,19 +8,8 @@ type Props = {
 };
 
 const index = ({ setSelectedPage }: Props) => {
-  const [shake, setShake] = useState(false);
-
-  const shakeVariant = {
-    shake: {
-      x: [0, -5, 5, -5, 5, 0],
-      transition: { duration: 0.4 },
-    },
-  };
-
   const handleClick = () => {
     console.log("HERE");
-    setShake(true);
-    setTimeout(() => setShake(false), 400);
 
     const el = document.getElementById("projects");
     console.log(el);
@@ -59,10 +48,11 @@ const index = ({ setSelectedPage }: Props) => {
           </motion.p>
 
           <motion.button
+            aria-label="Link to projects"
             className="inline-block px-6 py-3 bg-primary text-white rounded-lg shadow hover:brightness-110 transition font-dmsans font-medium tracking-wide"
-            variants={shakeVariant}
-            animate={shake ? "shake" : ""}
-            onClick={handleClick}
+            initial={{ x: 0 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             View My Work
           </motion.button>

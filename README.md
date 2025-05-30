@@ -1,54 +1,80 @@
-# React + TypeScript + Vite
+# 💼 Saira's Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and accessible developer portfolio built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. Designed and developed from scratch to showcase projects, skills, and a bit about me — no templates used.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🌗 Light/Dark theme toggle
+- 📱 Fully responsive design
+- 💻 Built with React + TypeScript
+- 🎨 Styled using Tailwind CSS
+- 🎞️ Smooth animations with Framer Motion
+- 📌 Scrollspy navigation with active page highlighting
+- 📜 Accessible, semantic markup
+- 🧩 Modular and clean component structure
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![Desktop View](./public/portfolio-desktop.png)
+![Mobile View](./public/portfolio-mobile.png)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+- **Frontend:** React, TypeScript, Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Font:** Montserrat & DM Sans via Google Fonts
+
+## 📂 Project Structure
+
+```bash
+src/
+├── components/       # Reusable components
+├── sections/         # Home, About, Projects, Contact, etc.
+├── shared/           # Types and constants
+├── assets/           # Static images/icons
+└── App.tsx           # Main app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone the repo**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+git clone https://github.com/saira512dev/ReactPortfolio.git
+cd ReactPortfolio
 ```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Run the app**
+
+```bash
+npm run dev
+```
+
+4. **Build for production**
+
+```bash
+npm run build
+```
+
+## 📫 Contact
+
+If you'd like to collaborate, hire, or just say hi:
+
+- **Email:** sairaabdullapa@gmail.com
+- **LinkedIn:** [linkedin.com/in/yourprofile](https://www.linkedin.com/in/saira-abdulla/)
+
+## 📄 License
+
+🚫 Please Do Not Copy
+This portfolio was designed and developed from scratch by me to reflect my personal and professional growth.
+
+You're welcome to explore the code and learn from it, but please do not copy or reuse it directly without credit or permission.
+
+---

@@ -11,6 +11,7 @@ export default {
         secondary: "#F9FAFB",
         textLight: "#475569",
         textDark: "#E2E8F0",
+        "card-dark": "#2D3748", // a softer dark (Tailwind's gray-800)
       },
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
@@ -20,7 +21,7 @@ export default {
     screens: {
       // xss:"317px",
       // xs: "480px",
-      // sm: "768px",
+      sm: "450px",
       md: "1060px",
     },
   },
