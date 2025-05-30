@@ -15,7 +15,7 @@ A responsive and accessible developer portfolio built with **React**, **TypeScri
 
 ## 📸 Screenshots
 
-![Desktop View](./public/portfolioLatest.png)
+![Desktop View](./public/PortfolioLatest.png)
 ![Mobile View](./public/portfolio-mobile.png)
 
 ## 🛠️ Tech Stack
