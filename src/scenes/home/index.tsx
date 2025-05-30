@@ -58,7 +58,7 @@ const index = ({ setSelectedPage, selectedPage }: Props) => {
                 page="Projects"
                 setSelectedPage={setSelectedPage}
                 selectedPage={selectedPage}
-                style="inline-block px-6 py-3 bg-primary rounded-lg"
+                style="inline-block px-6 py-3 text-white bg-primary rounded-lg"
               />
             </motion.div>
 
