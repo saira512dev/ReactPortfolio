@@ -37,7 +37,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           whileHover={{ scale: 1.05 }}
           className="hidden md:flex items-center space-x-4 font-bold text-indigo-600 dark:text-indigo-400"
         >
-          PORTFOLIO
+          SAIRA
         </motion.div>
 
         {/* CENTER (Desktop) */}
@@ -92,7 +92,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            PORTFOLIO
+            SAIRA
           </motion.button>
 
           {/* Toggle button on right */}
