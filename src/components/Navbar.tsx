@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage, IconType } from "@/shared/types";
 import Link from "./Link";
-import { HiX } from "react-icons/hi";
+import { HiX as _HiX } from "react-icons/hi";
+
+const HiX = _HiX as IconType;
 
 type Props = {
   isTopOfPage: boolean;
@@ -61,14 +63,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
         {/* RIGHT (Desktop) */}
         <div className="hidden md:flex items-center space-x-4">
-          <motion.a
-            href="#contact"
+          <motion.div
             className="px-4 py-2 border border-indigo-500 dark:border-indigo-400 font-dmsans font-medium rounded-md text-indigo-500 dark:text-indigo-400 hover:bg-indigo-500 hover:text-white transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact
-          </motion.a>
+            <Link
+              page="Contact"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          </motion.div>
           <motion.button
             onClick={() => setDarkMode(!darkMode)}
             whileHover={{ scale: 1.1 }}
@@ -136,15 +141,18 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   />
                 </motion.div>
               ))}
-              <motion.a
-                href="#contact"
-                className="hover:text-indigo-500 dark:hover:text-indigo-400  font-dmsans block font-medium transition-colors"
+              <motion.div
+                className="hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Contact
-              </motion.a>
+                <Link
+                  page="Contact"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+              </motion.div>
             </div>
           </motion.div>
         )}

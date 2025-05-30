@@ -1,4 +1,4 @@
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage, IconType } from "@/shared/types";
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -12,27 +12,20 @@ import {
   SiLaravel,
 } from "react-icons/si";
 
-type SkillIcon = React.FC<
-  React.SVGProps<SVGSVGElement> & {
-    size?: number | string;
-    title?: string;
-  }
->;
-
 type Skill = {
   name: string;
-  Icon: SkillIcon;
+  Icon: IconType;
 };
 
 const skills: Skill[] = [
-  { name: "React", Icon: SiReact as SkillIcon },
-  { name: "Next.js", Icon: SiNextdotjs as SkillIcon },
-  { name: "Tailwind CSS", Icon: SiTailwindcss as SkillIcon },
-  { name: "Express", Icon: SiExpress as SkillIcon },
-  { name: "Node.js", Icon: SiNodedotjs as SkillIcon },
-  { name: "MongoDB", Icon: SiMongodb as SkillIcon },
-  { name: "PostgreSQL", Icon: SiPostgresql as SkillIcon },
-  { name: "Laravel", Icon: SiLaravel as SkillIcon },
+  { name: "React", Icon: SiReact as IconType },
+  { name: "Next.js", Icon: SiNextdotjs as IconType },
+  { name: "Tailwind CSS", Icon: SiTailwindcss as IconType },
+  { name: "Express", Icon: SiExpress as IconType },
+  { name: "Node.js", Icon: SiNodedotjs as IconType },
+  { name: "MongoDB", Icon: SiMongodb as IconType },
+  { name: "PostgreSQL", Icon: SiPostgresql as IconType },
+  { name: "Laravel", Icon: SiLaravel as IconType },
 ];
 
 type Props = {
@@ -64,8 +57,8 @@ const Skills = ({ setSelectedPage }: Props) => {
               className="
               flex flex-col items-center justify-center
               p-4 rounded-lg shadow-md
-              bg-secondary           /* light */
-              dark:bg-card-dark      /* custom dark, or use dark:bg-gray-800 */
+              bg-secondary           
+              dark:bg-card-dark    
               hover:bg-primary/10
               dark:hover:bg-primary/20
               transition-colors

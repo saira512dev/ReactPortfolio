@@ -46,7 +46,9 @@ const About = ({ setSelectedPage }: Props) => {
           <br />I enjoy learning through building real-world projects and
           occasionally contributing to open source( I even got to make a small
           contribution to Firefox!). I’m all about thoughtful code, continuous
-          growth, and solving meaningful problems with technology.
+          growth, and solving meaningful problems with technology. This site
+          itself is a reflection of my learning — designed and developed from
+          scratch using React, Typescript, Tailwind CSS, and Framer Motion.
         </motion.p>
       </motion.div>
     </section>

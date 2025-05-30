@@ -5,9 +5,10 @@ type Props = {
   page: string;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
+  style?: string;
 };
 
-const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
+const Link = ({ page, selectedPage, setSelectedPage, style = "" }: Props) => {
   const lowerCasePage = page
     .toLocaleLowerCase()
     .replace(/ /g, "") as SelectedPage;
@@ -24,8 +25,11 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
 
   return (
     <AnchorLink
-      className={`${selectedPage === lowerCasePage ? "text-indigo-400" : ""}
-  transition duration-500 hover:text-primary-300 font-dmsans font-medium tracking-wide`}
+      className={`${selectedPage === lowerCasePage ? "text-indigo-400" : ""} 
+    ${
+      style == "" ? "" : style
+    } transition duration-500 hover:text-primary-300 font-dmsans font-medium tracking-wide
+    `}
       href={`#${lowerCasePage}`}
       onClick={handleLinkClick}
     >

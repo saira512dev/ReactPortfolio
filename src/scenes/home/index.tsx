@@ -2,12 +2,14 @@ import Navbar from "@/components/Navbar";
 import { SelectedPage } from "@/shared/types";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "@/components/Link";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
+  selectedPage: SelectedPage;
 };
 
-const index = ({ setSelectedPage }: Props) => {
+const index = ({ setSelectedPage, selectedPage }: Props) => {
   const handleClick = () => {
     console.log("HERE");
 
@@ -46,16 +48,34 @@ const index = ({ setSelectedPage }: Props) => {
             Software Engineer crafting clean, responsive UIs with React &
             Next.js
           </motion.p>
+          <div className="flex justify-center items-center flex-col md:flex-row gap-4">
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Link
+                page="Projects"
+                setSelectedPage={setSelectedPage}
+                selectedPage={selectedPage}
+                style="inline-block px-6 py-3 bg-primary rounded-lg"
+              />
+            </motion.div>
 
-          <motion.button
-            aria-label="Link to projects"
-            className="inline-block px-6 py-3 bg-primary text-white rounded-lg shadow hover:brightness-110 transition font-dmsans font-medium tracking-wide"
-            initial={{ x: 0 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View My Work
-          </motion.button>
+            <motion.a
+              href="https://bugzilla.mozilla.org/buglist.cgi?email1=sairaabdullapa%40gmail.com&classification=Client%20Software&classification=Developer%20Infrastructure&classification=Components&classification=Server%20Software&classification=Other&list_id=17572875&emailassigned_to1=1&query_format=advanced&emailtype1=equals&resolution=FIXED"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-primary text-white rounded-lg shadow hover:brightness-110 transition font-dmsans font-medium tracking-wide"
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.5 }}
+            >
+              Open Source Contributions
+            </motion.a>
+          </div>
         </div>
       </motion.div>
     </section>

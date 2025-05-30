@@ -9,13 +9,13 @@ A responsive and accessible developer portfolio built with **React**, **TypeScri
 - 💻 Built with React + TypeScript
 - 🎨 Styled using Tailwind CSS
 - 🎞️ Smooth animations with Framer Motion
-- 📌 Scrollspy navigation with active page highlighting
+- 📌 Smooth Navigation with active page highlighting
 - 📜 Accessible, semantic markup
 - 🧩 Modular and clean component structure
 
 ## 📸 Screenshots
 
-![Desktop View](./public/portfolio-desktop.png)
+![Desktop View](./public/portfolioLatest.png)
 ![Mobile View](./public/portfolio-mobile.png)
 
 ## 🛠️ Tech Stack
@@ -72,9 +72,8 @@ If you'd like to collaborate, hire, or just say hi:
 
 ## 📄 License
 
-🚫 Please Do Not Copy
 This portfolio was designed and developed from scratch by me to reflect my personal and professional growth.
 
-You're welcome to explore the code and learn from it, but please do not copy or reuse it directly without credit or permission.
+You're welcome to explore the code and learn from it. If you are using it, I would aprreciate a shoutout or a star on my repo.
 
 ---

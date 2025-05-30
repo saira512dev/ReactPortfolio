@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./scenes/home";
 import About from "./scenes/about";
 import Skills from "./scenes/skills";
+import Contact from "./scenes/contact";
 import Footer from "./scenes/footer";
 import { SelectedPage } from "./shared/types";
+import Projects from "./scenes/projects";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -34,12 +35,11 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <Home setSelectedPage={setSelectedPage} />
+      <Home setSelectedPage={setSelectedPage} selectedPage={selectedPage} />
       <About setSelectedPage={setSelectedPage} />
+      <Projects setSelectedPage={setSelectedPage} />
       <Skills setSelectedPage={setSelectedPage} />
-      {/* <Testimonials setSelectedPage={setSelectedPage} /> */}
-      {/* <FAQ setSelectedPage={setSelectedPage} /> */}
-      {/* <ContactUs setSelectedPage={setSelectedPage} /> */}
+      <Contact setSelectedPage={setSelectedPage} />
       <Footer />
     </div>
   );

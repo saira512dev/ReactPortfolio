@@ -22,7 +22,9 @@ export default {
       // xss:"317px",
       // xs: "480px",
       sm: "450px",
+      mini:"650px",
       md: "1060px",
+      lg:"1330px"
     },
   },
   plugins: [],
