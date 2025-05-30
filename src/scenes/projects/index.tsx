@@ -77,7 +77,7 @@ const Projects = ({ setSelectedPage }: Props) => {
         </motion.h2>
         <div className="grid place-items-center gap-7 lg:gap-10 md:grid-cols-2">
           {projects.map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
+            <ProjectCard key={idx} {...project} delay={idx * 0.2} />
           ))}
         </div>
       </motion.div>

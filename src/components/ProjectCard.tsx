@@ -2,6 +2,10 @@ import { ProjectCardProps } from "@/shared/types";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 
+type Props = ProjectCardProps & {
+  delay: number;
+};
+
 export default function ProjectCard({
   title,
   description,
@@ -10,12 +14,19 @@ export default function ProjectCard({
   frontendLink,
   backendLink,
   liveDemo,
-}: ProjectCardProps) {
+  delay,
+}: Props) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        type: "spring",
+        stiffness: 200,
+        damping: 20,
+        delay,
+      }}
       className="bg-white dark:bg-[#1e1e1e] md:min-h-[350px] rounded-2xl shadow-md overflow-hidden max-w-xl w-full"
     >
       {/* Image */}
