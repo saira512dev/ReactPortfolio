@@ -78,6 +78,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             onClick={() => setDarkMode(!darkMode)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            aria-label="dark-light mode button"
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </motion.button>

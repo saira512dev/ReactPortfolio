@@ -34,6 +34,7 @@ export default function ProjectCard({
         src={imageUrl}
         alt={`${title} screenshot`}
         className="w-full h-52 object-cover"
+        loading="lazy"
       />
 
       {/* Content */}

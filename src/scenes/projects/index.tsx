@@ -24,7 +24,7 @@ let projects: ProjectCardProps[] = [
     frontendLink: "https://github.com/saira512dev/AdminDashboard-Client",
     backendLink: "https://github.com/saira512dev/AdminDashboard-Server",
     liveDemo: "https://admin-dashboard-mernstack.netlify.app",
-    imageUrl: "./adminDashboard.png",
+    imageUrl: "./adminDashboard.webp",
   },
   {
     title: "Get Fit Go – Modern Gym Marketing Website",
@@ -40,7 +40,7 @@ let projects: ProjectCardProps[] = [
     ],
     frontendLink: "https://github.com/saira512dev/GymApp",
     liveDemo: "https://get-fit-go.netlify.app/",
-    imageUrl: "./GymApp.png",
+    imageUrl: "./GymApp.webp",
   },
   // {
   //   title: "Travel Agency Dashboard",

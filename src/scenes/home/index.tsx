@@ -58,7 +58,7 @@ const index = ({ setSelectedPage, selectedPage }: Props) => {
                 page="Projects"
                 setSelectedPage={setSelectedPage}
                 selectedPage={selectedPage}
-                style="inline-block px-6 py-3 text-white bg-primary rounded-lg"
+                style="inline-block px-6 py-3 text-white bg-indigo-700 rounded-lg"
               />
             </motion.div>
 
@@ -66,12 +66,13 @@ const index = ({ setSelectedPage, selectedPage }: Props) => {
               href="https://bugzilla.mozilla.org/buglist.cgi?email1=sairaabdullapa%40gmail.com&classification=Client%20Software&classification=Developer%20Infrastructure&classification=Components&classification=Server%20Software&classification=Other&list_id=17572875&emailassigned_to1=1&query_format=advanced&emailtype1=equals&resolution=FIXED"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-primary text-white rounded-lg shadow hover:brightness-110 transition font-dmsans font-medium tracking-wide"
+              className="inline-block px-6 py-3 bg-indigo-700 text-white rounded-lg shadow hover:brightness-110 transition font-dmsans font-medium tracking-wide"
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.5 }}
+              aria-label="link to bugs fixed in mozilla"
             >
               Open Source Contributions
             </motion.a>
