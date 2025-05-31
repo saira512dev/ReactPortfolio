@@ -17,7 +17,6 @@ const Link = ({ page, selectedPage, setSelectedPage, style = "" }: Props) => {
     .split(" ")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
-  console.log(page, lowerCasePage, pageLink, `#${lowerCasePage}`);
 
   function handleLinkClick() {
     setSelectedPage(lowerCasePage);

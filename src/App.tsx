@@ -27,7 +27,6 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  console.log(selectedPage);
   return (
     <div className="app bg-gray-20 ">
       <Navbar

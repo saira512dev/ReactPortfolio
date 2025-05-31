@@ -10,16 +10,6 @@ type Props = {
 };
 
 const index = ({ setSelectedPage, selectedPage }: Props) => {
-  const handleClick = () => {
-    console.log("HERE");
-
-    const el = document.getElementById("projects");
-    console.log(el);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section id="home">
       <motion.div
